@@ -1,2 +1,2 @@
 # adventofcode
-Solution of http://adventofcode.com by scala
+Solutions of http://adventofcode.com written in scala
