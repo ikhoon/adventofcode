@@ -13,11 +13,11 @@ object Day4 extends App {
   def matched(hex: String): Boolean = hex.startsWith("00000")
 
   val predicate = matched _ compose toHex compose md5
-  def minning(prefix: String): Int= Stream.from(0).takeWhile(i => !predicate(s"$prefix$i")).last + 1
+  def mining(prefix: String): Int= Stream.from(0).dropWhile(i => !predicate(s"$prefix$i")).head
 
-  assert(minning("abcdef") == 609043)
-  assert(minning("pqrstuv") == 1048970)
-  println(minning("ckczppom"))
+  assert(mining("abcdef") == 609043)
+  assert(mining("pqrstuv") == 1048970)
+  println(mining("ckczppom"))
 }
 
 
