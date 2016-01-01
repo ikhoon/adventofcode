@@ -7,7 +7,7 @@ import scala.collection.mutable
   */
 object Day3 extends App {
   case class Pos(x: Int, y: Int)
-  val moves = getFileInputStream("/day3/input.txt").iter
+  val moves = getFile("/day3/input.txt").iter
   val start = Pos(0, 0)
   var paths = mutable.Map[Pos, Int](start -> 1)
   val updatePath = (pos: Pos) => {

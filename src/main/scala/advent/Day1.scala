@@ -7,7 +7,7 @@ import scala.io.Source
   */
 object Day1 extends App {
 
-  val floor = getFileInputStream("/day1/input.txt").iter.foldLeft(0) { (acc, c) => c match {
+  val floor = getFile("/day1/input.txt").iter.foldLeft(0) { (acc, c) => c match {
       case '(' => acc + 1
       case ')' => acc - 1
     }

@@ -6,5 +6,5 @@ import scala.io.{BufferedSource, Source}
   */
 package object advent {
 
-  def getFileInputStream(file: String): BufferedSource = fromInputStream(getClass.getResourceAsStream(file))
+  def getFile(file: String): BufferedSource = fromInputStream(getClass.getResourceAsStream(file))
 }

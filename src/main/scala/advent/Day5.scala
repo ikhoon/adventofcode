@@ -20,5 +20,5 @@ object Day5 extends App {
   assert(!predicate("haegwjzuvuyypxyu"))
   assert(!predicate("dvszwmarrgswjxmb"))
 
-  println(getFileInputStream("/day5/input.txt").getLines().count(predicate))
+  println(getFile("/day5/input.txt").getLines().count(predicate))
 }

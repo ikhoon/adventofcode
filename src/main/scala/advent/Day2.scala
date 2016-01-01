@@ -14,7 +14,7 @@ object Day2 extends App {
   case class Box(l: Int, w: Int, h: Int)
 
   val pattern = """(\d+)x(\d+)x(\d+)""".r
-  val sizes = getFileInputStream("/day2/input.txt").getLines()
+  val sizes = getFile("/day2/input.txt").getLines()
   val boxes = sizes.flatMap { size =>
     pattern.findAllIn(size).matchData.map { m =>
       val box = Box(m.group(1).toInt, m.group(2).toInt, m.group(3).toInt)
