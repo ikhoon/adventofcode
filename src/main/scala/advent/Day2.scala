@@ -15,12 +15,8 @@ object Day2 extends App {
 
   val pattern = """(\d+)x(\d+)x(\d+)""".r
   val sizes = getFile("/day2/input.txt").getLines()
-  val boxes = sizes.flatMap { size =>
-    pattern.findAllIn(size).matchData.map { m =>
-      val box = Box(m.group(1).toInt, m.group(2).toInt, m.group(3).toInt)
-      println(box)
-      box
-    }
+  val boxes = sizes.flatMap {
+    pattern.findAllIn(_).matchData.map { m => Box(m.group(1).toInt, m.group(2).toInt, m.group(3).toInt) }
   }
 
 
